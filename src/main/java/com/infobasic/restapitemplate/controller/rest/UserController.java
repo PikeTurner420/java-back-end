@@ -50,24 +50,25 @@ public class UserController {
             return new Gson().toJson(response);
         });
         
-        delete(APIVersion + "/company/delete/:id", (req, res) -> {
+        /* delete(APIVersion + "/company/delete/:id", (req, res) -> {
             res.type("application/json");
             
             int paramID = Integer.parseInt(req.params("id"));
             System.out.println(paramID);
             userService.deleteCompanyById(paramID);
-            return new Gson().toJsonTree(new StandardResponse("200"));
-        });
+            res.status(200);
+            return "user deleted";
+        }); */
 
 
-        delete(APIVersion + "/private/delete/:id", (req, res) -> {
+        /* delete(APIVersion + "/private/delete/:id", (req, res) -> {
             res.type("application/json");
             
             int paramID = Integer.parseInt(req.params("id"));
             System.out.println(paramID);
             userService.deletePrivateById(paramID);
             return new Gson().toJsonTree(new StandardResponse("200"));
-        });
+        }); */
        
         /*
         post(APIVersion + "/user/create", (req, res) -> {
